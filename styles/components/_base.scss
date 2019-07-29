@@ -5,7 +5,10 @@ html {
 body {
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
-  overflow-x: hidden;
+
+  .site__wrapper {
+    overflow: hidden;
+  }
 }
 
 h1 {
