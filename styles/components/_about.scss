@@ -1,0 +1,27 @@
+.about {
+  .about__image {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: fit-content;
+    img {
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+      width: 70%;
+      object-fit: contain;
+    }
+  }
+
+  .about__text {
+    box-shadow: 7px 7px $secondary-color;
+    padding: 20px 25px 50px;
+    margin: 20px 10px;
+  }
+}
+
+@media (min-width: 740px) {
+  .about__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
