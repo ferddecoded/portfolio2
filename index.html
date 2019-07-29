@@ -35,7 +35,11 @@
       </ul>
     </div>
     <div class="home__button">
-      <img src="./assets/web-development.svg" alt="web developer svg" id="home" />
+      <img
+        src="./assets/web-development.svg"
+        id="home"
+        alt="web developer svg"
+      />
       <a href="#" id="landing">Ferddecoded.ca</a>
     </div>
 
@@ -612,7 +616,7 @@
       const aboutLink = document.querySelector('#about');
       const portfolioLink = document.querySelector('#portfolio');
       const contactLink = document.querySelector('#contact');
-      const homeButton = document.querySelector('#home');
+      const devHomeButton = document.querySelector('#home');
 
       const socialListGeneral = document.querySelector(
         '.social__list--container.general',
@@ -627,18 +631,22 @@
 
       const handleMenuClick = event => {
         const selectedPage = event.target.id;
-        const newPage =
-          selectedPage === 'home'
-            ? document.querySelector('.landing')
-            : document.querySelector(`.${selectedPage}`);
+        const newPage = document.querySelector(`.${selectedPage}`);
         hideAllPages();
-        selectedPage === 'landing' || 'home'
+        selectedPage === 'landing'
           ? socialListGeneral.classList.remove('reveal')
           : socialListGeneral.classList.add('reveal');
         newPage.classList.remove('hide');
         AOS.refresh();
       };
-      homeButton.addEventListener('click', event => handleMenuClick(event));
+
+      const handleHomeImageClick = () => {
+        hideAllPages();
+        socialListGeneral.classList.remove('reveal');
+        landing.classList.remove('hide');
+        AOS.refresh();
+      };
+      devHomeButton.addEventListener('click', () => handleHomeImageClick());
       aboutLink.addEventListener('click', event => handleMenuClick(event));
       landingLink.addEventListener('click', event => handleMenuClick(event));
       portfolioLink.addEventListener('click', event => handleMenuClick(event));
