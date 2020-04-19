@@ -16,21 +16,22 @@
   .project__item {
     margin-bottom: 50px;
 
+    h3 {
+      text-align: center;
+      margin: 20px;
+      font-family: 'Archivo';
+      font-size: 4.5rem;
+      color: $secondary-color;
+      width: 100%;
+      display: none;
+      font-weight: bold;
+      text-shadow: 2px 4px 3px rgba(179, 220, 230, 0.8);
+    }
+
     .project__item--image {
       display: flex;
       flex-direction: column;
       align-items: center;
-      h3 {
-        display: none;
-      }
-    }
-
-    h3 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-family: 'Archivo';
-      font-size: 2.5rem;
-      color: $secondary-color;
     }
 
     .project__item--text {
@@ -41,6 +42,10 @@
       padding: 10px;
       display: grid;
       justify-items: center;
+
+      h3 {
+        display: block;
+      }
 
       ul {
         width: 100%;
@@ -63,24 +68,30 @@
   @media (min-width: 760px) {
     &:nth-of-type(2n) {
       flex-direction: row-reverse;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex-direction: column;
     }
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
+
+    h3 {
+      display: block;
+    }
 
     .project__item--image {
       padding: 0 10px;
-      width: 50%;
-      h3 {
-        display: block;
-      }
+      width: 80%;
     }
 
     .project__item--text {
       h3 {
         display: none;
       }
-      width: 50%;
+      width: 90%;
       margin: 20px;
     }
   }

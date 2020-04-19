@@ -327,7 +327,8 @@ textarea {
     padding: 20px 10px 10px 10px;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    box-sizing: border-box; }
     .skills__container .skill img {
       height: 50px; }
     .skills__container .skill p {
@@ -351,18 +352,20 @@ textarea {
 
 .portfolio .project__item {
   margin-bottom: 50px; }
+  .portfolio .project__item h3 {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Archivo';
+    font-size: 4.5rem;
+    color: #29547a;
+    width: 100%;
+    display: none;
+    font-weight: bold;
+    text-shadow: 2px 4px 3px rgba(179, 220, 230, 0.8); }
   .portfolio .project__item .project__item--image {
     display: flex;
     flex-direction: column;
     align-items: center; }
-    .portfolio .project__item .project__item--image h3 {
-      display: none; }
-  .portfolio .project__item h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: 'Archivo';
-    font-size: 2.5rem;
-    color: #29547a; }
   .portfolio .project__item .project__item--text {
     box-shadow: 7px 7px #29547a;
     width: 80%;
@@ -371,6 +374,8 @@ textarea {
     padding: 10px;
     display: grid;
     justify-items: center; }
+    .portfolio .project__item .project__item--text h3 {
+      display: block; }
     .portfolio .project__item .project__item--text ul {
       width: 100%;
       display: flex;
@@ -385,17 +390,22 @@ textarea {
 @media (min-width: 760px) {
   .portfolio .recent__section .project__item {
     display: flex;
-    align-items: center;
-    justify-content: center; }
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column; }
     .portfolio .recent__section .project__item:nth-of-type(2n) {
-      flex-direction: row-reverse; }
+      flex-direction: row-reverse;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex-direction: column; }
+    .portfolio .recent__section .project__item h3 {
+      display: block; }
     .portfolio .recent__section .project__item .project__item--image {
       padding: 0 10px;
-      width: 50%; }
-      .portfolio .recent__section .project__item .project__item--image h3 {
-        display: block; }
+      width: 80%; }
     .portfolio .recent__section .project__item .project__item--text {
-      width: 50%;
+      width: 90%;
       margin: 20px; }
       .portfolio .recent__section .project__item .project__item--text h3 {
         display: none; } }
@@ -465,7 +475,7 @@ textarea {
 
 .wrapper {
   padding-bottom: 50px;
-  max-width: 1000px;
+  max-width: 1200px;
   width: 80%;
   margin: 0px auto;
   height: fit-content; }
