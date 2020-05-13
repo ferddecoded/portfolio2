@@ -514,8 +514,7 @@ section.contact {
 .social__list--container.general {
   bottom: auto;
   top: 9%;
-  opacity: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   position: absolute;
   width: 100%;
@@ -530,7 +529,7 @@ section.contact {
     padding: 5px; }
 
 .social__list--container.general.reveal {
-  opacity: 100; }
+  display: flex; }
 
 #clouds {
   padding: 100px 0;
